@@ -19,9 +19,9 @@ reaction game where you have to press the button with the same color as the ligh
 
 // constants
 #define LED_COUNT 66
-#define MAX_LEVELS 10                 // amount of levels per game round (one level equals one colored button to be pressed)
+#define MAX_LEVELS 7                  // amount of levels per game round (one level equals one colored button to be pressed)
 #define MIN_REACTION_TIME 1000        // lowest reaction time possible (in ms)
-#define REACTION_TIME_REDUCTION 1000  // reduces the reaction time given after each successful level completion (in ms)
+#define REACTION_TIME_REDUCTION 500  // reduces the reaction time given after each successful level completion (in ms)
 #define STARTING_REACTION_TIME 3000   // starting reaction time for the first color (in ms)
 
 // variables
@@ -196,6 +196,8 @@ void initiateGameWin() {
         break;
       } else if (!game_started && digitalRead(BUTTON_START) == LOW) {  // game reset
         game_won = false;
+        game_started = false;
+        delay(1000);
         break;
       }
     }
