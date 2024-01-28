@@ -14,6 +14,9 @@
         - [Farbe und Design](#farbe-und-design)
         - [Software und Technik](#software-und-technik)
     - [React to Snack - Demo](#react-to-snack---demo)
+        - [Spielanleitung](#spielanleitung)
+        - [Gewinnen](#gewinnen)
+        - [Verlieren](#verlieren)
     - [Ausblick](#ausblick)
 
 # Motivation
@@ -102,9 +105,9 @@ Hierbei werden die folgenden SVGs benötigt:
 * side_right.svg: Die rechte Seite des Automaten.
 * top_and_hole.svg: Die obere Platte des Automaten und eine Platte mit der Auswurföffnung für die Snacks.  
 
-  Für den Bau des Gehäuses entschieden wir uns dazu, Sperrholzplatten zu benutzen. Die Sperrholzplatten wurden mit dem 
-  Vektorgrafik-Programm Inkscape erstellt und können mithilfe des Lasercutters ausgeschnitten werden. Die dafür benötigten SVG-Dateien sind
-  im [SVG Verzeichnis](svgs/) zu finden.
+Für den Bau des Gehäuses entschieden wir uns dazu, Sperrholzplatten zu benutzen. Die Sperrholzplatten wurden mit dem 
+Vektorgrafik-Programm Inkscape erstellt und können mithilfe des Lasercutters ausgeschnitten werden. Die dafür benötigten SVG-Dateien sind
+im [SVG Verzeichnis](svgs/) zu finden.
 
 Nachdem alle Platten vom Lasercutter geschnitten wurden, wird der Automat vorerst nur zusammengesteckt und nicht
 verklebt.
@@ -243,21 +246,16 @@ doppelseitigem Klebeband an die Innenseite der Rückwand kleben (siehe nächstes
 
 # React to Snack - Demo
 
-<div style="font-size: 24px; font-weight: bold; margin-bottom: 10px" align="center">Spielanleitung</div>
+## Spielanleitung
 
 ![Spielanleitung](images/game_instructions.jpg)
 
-<div align="center">
-  <div style="width:45%; display:inline-block; margin: 10px">
-    <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px" align="center">Gewinnen</div>
-    <img src="images/play_win.gif" alt="Snack-Win" style="width:100%; max-width:780px">
-  </div>
-  <div style="width:45%; display:inline-block; margin: 10px">
-    <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px" align="center">Verlieren</div>
-    <img src="images/play_lose.gif" alt="Snack-Win" style="width:100%; max-width:780px">
-  </div>
-</div>
-<br>
+## Gewinnen
+
+![Snack Gewinnen](images/play_win.gif)
+
+## Verlieren
+![Verlieren](images/play_lose.gif)
 
 # Ausblick
 
