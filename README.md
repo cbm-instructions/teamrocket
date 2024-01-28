@@ -3,21 +3,21 @@
 # Inhaltsverzeichnis
 
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-    - [Motivation](#motivation)
-    - [Vorbereitung](#vorbereitung)
-        - [Werkzeuge](#werkzeuge)
-        - [Material](#material)
-        - [Empfohlene Vorkenntnisse](#empfohlene-vorkenntnisse)
-    - [Bauanleitung](#bauanleitung)
-        - [Gehäuse](#gehäuse)
-        - [Ausgabevorrichtung](#ausgabevorrichtung)
-        - [Farbe und Design](#farbe-und-design)
-        - [Software und Technik](#software-und-technik)
-    - [React to Snack - Demo](#react-to-snack---demo)
-        - [Spielanleitung](#spielanleitung)
-        - [Gewinnen](#gewinnen)
-        - [Verlieren](#verlieren)
-    - [Ausblick](#ausblick)
+- [Motivation](#motivation)
+- [Vorbereitung](#vorbereitung)
+  - [Werkzeuge](#werkzeuge)
+  - [Material](#material)
+  - [Empfohlene Vorkenntnisse](#empfohlene-vorkenntnisse)
+- [Bauanleitung](#bauanleitung)
+  - [Gehäuse](#gehäuse)
+  - [Ausgabevorrichtung](#ausgabevorrichtung)
+  - [Farbe und Design](#farbe-und-design)
+  - [Software und Technik](#software-und-technik)
+- [React to Snack - Demo](#react-to-snack---demo)
+  - [Spielanleitung](#spielanleitung)
+  - [Gewinnen](#gewinnen)
+  - [Verlieren](#verlieren)
+- [Ausblick](#ausblick)
 
 # Motivation
 
@@ -206,7 +206,7 @@ kann frei gewählt werden.
 
 Hierbei wird die folgende SVG benötigt:
 
-* Arduino Plattenhalter SVG hier
+* arduino_platte.svg: Die Holzplatte an die der Arduino befestigt wird.
 
 Für die Technik werden ein Arduino Uno, eine Platine und ganz viele Kabel benutzt. Dieser steckt auf entsprechenden
 Steckpins, die an eine Platine gelötet wurden. Dadurch kann man den Arduino Uno beliebig austauschen. Ebenfalls ist das
@@ -242,7 +242,10 @@ die Motoren, die Lichtschranken und die elektrischen Schalter montiert sind) hä
 man die Wago Verbindungsklammern nutzen (alternativ kann man Kabel mit Büchsen und Steckern verwenden) und diese mit
 doppelseitigem Klebeband an die Innenseite der Rückwand kleben (siehe nächstes Bild).
 
+
 ![Alternativer Text](images/Arduino_befestigung.jpg)
+
+Zum Schluss wird der Arduino auf die Arduino-Platte aus der "arduino_platte.svg" geschraubt. Dazu können alle Schrauben und Muttern genutzt werden, die in den Arduino passen. Dazu müssen zuerst Löcher in die Platte gebohrt werden, die den Positionen der Löcher des Arduinos entsprechen. Die Platte kann dann mit Heißkleber an die Innenseite des Automaten geklebt werden.
 
 # React to Snack - Demo
 
