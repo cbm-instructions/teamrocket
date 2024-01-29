@@ -1,5 +1,5 @@
 /*
-reaction game where you have to press the button with the same color as the light from the LED strip in a specific amount of time
+Reaction game
 */
 #include <Adafruit_NeoPixel.h>
 
@@ -19,10 +19,10 @@ reaction game where you have to press the button with the same color as the ligh
 
 // constants
 #define LED_COUNT 66
-#define MAX_LEVELS 7                  // amount of levels per game round (one level equals one colored button to be pressed)
-#define MIN_REACTION_TIME 1000        // lowest reaction time possible (in ms)
+#define MAX_LEVELS 7                 // amount of levels per game round (one level equals one colored button to be pressed)
+#define MIN_REACTION_TIME 1000       // lowest reaction time possible (in ms)
 #define REACTION_TIME_REDUCTION 500  // reduces the reaction time given after each successful level completion (in ms)
-#define STARTING_REACTION_TIME 3000   // starting reaction time for the first color (in ms)
+#define STARTING_REACTION_TIME 3000  // starting reaction time for the first level (in ms)
 
 // variables
 bool debug;
@@ -38,7 +38,9 @@ int order_array[MAX_LEVELS];
 // functions
 void initiateGameOver();
 void initiateGameWin();
+void ledLoseSequence();
 void ledOff();
+void rainbow(unsigned int wait);
 void setColor(uint32_t color);
 void spinMotorLeft();
 void spinMotorRight();
@@ -57,8 +59,8 @@ void setup() {
   debug = true;
   game_started = false;
 
-  // initialize Neopixel LED strip
-  strip.begin();
+  // LED strip
+  strip.begin();  // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();
   strip.setBrightness(255);  // max = 255
 
@@ -84,6 +86,7 @@ void setup() {
 void loop() {
   // game start
   if (!game_started && digitalRead(BUTTON_START) == LOW) {
+    ledOff();
     startGame();
   } else {
     setColor(strip.Color(255, 255, 255));  // white
@@ -99,29 +102,30 @@ void loop() {
         Serial.print(reaction_time / 1000);
         Serial.println(" seconds.");
       }
-      delay(1000);  // delay each level
+      delay(1000); // delay each color display
       // activate LED strip to match color that needs to be pressed
       switch (order_array[current_level]) {
         case 1:
           if (debug) {
+            Serial.println("Press the blue button.");
           }
           setColor(strip.Color(0, 0, 255));  // blue
           break;
         case 2:
           if (debug) {
-            Serial.println("Press the green button");
+            Serial.println("Press the green button.");
           }
           setColor(strip.Color(0, 255, 0));  // green
           break;
         case 3:
           if (debug) {
-            Serial.println("Press the red button");
+            Serial.println("Press the red button.");
           }
           setColor(strip.Color(255, 0, 0));  // red
           break;
         case 4:
           if (debug) {
-            Serial.println("Press the yellow button");
+            Serial.println("Press the yellow button.");
           }
           setColor(strip.Color(255, 165, 0));  // yellow
           break;
@@ -143,16 +147,16 @@ void loop() {
 // game over
 void initiateGameOver() {
   game_over = true;
-  // LEDs blink 5 times
+  game_started = false;
+  // LEDs flash 5 times
   for (int i = 0; i < 5; i++) {
     setColor(strip.Color(255, 255, 255));  // white
     delay(500);
     ledOff();
     delay(500);
   }
-  game_started = false;
   if (debug) {
-    Serial.print("Start game, please.");
+    Serial.print("Start next game, please.");
   }
 }
 
@@ -165,49 +169,44 @@ void initiateGameWin() {
       Serial.println("Choose snack, please.");
     }
     // LED win sequence and snack choice
-    for (long firstPixelHue = 0; firstPixelHue < 5 * 65536; firstPixelHue += 256) {  // flowing rainbow cycle along the whole strip
-      strip.rainbow(firstPixelHue);
-      strip.show();
-      if (debug) {
-        if (digitalRead(MOTOR_LEFT) == LOW) {
-          Serial.println("Left motor off.");
-        }
-        if (digitalRead(MOTOR_LEFT) == HIGH) {
-          Serial.println("Left motor on.");
-        }
-        if (digitalRead(MOTOR_RIGHT) == LOW) {
-          Serial.println("Right motor off.");
-        }
-        if (digitalRead(MOTOR_RIGHT) == HIGH) {
-          Serial.println("Right motor on.");
-        }
-      }
-      if (digitalRead(BUTTON_SPIRAL_LEFT) == LOW) {  // left snack
-        if (debug) {
-          Serial.println("Left snack chosen.");
-        }
-        spinMotorLeft();
-        break;
-      } else if (digitalRead(BUTTON_SPIRAL_RIGHT) == LOW) {  // right snack
-        if (debug) {
-          Serial.println("Right snack chosen.");
-        }
-        spinMotorRight();
-        break;
-      } else if (!game_started && digitalRead(BUTTON_START) == LOW) {  // game reset
-        game_won = false;
-        game_started = false;
-        delay(1000);
-        break;
-      }
-    }
+    rainbow(10);
+  }
+  if (debug) {
+    Serial.print("Start next game, please.");
   }
 }
 
-// turns off LED
+// turns off LED strip
 void ledOff() {
   strip.clear();
   strip.show();
+}
+
+// rainbow cycle along the whole strip while snack selection is made or game is restarted
+void rainbow(unsigned int wait) {
+  for (long firstPixelHue = 0; firstPixelHue < 5 * 65536; firstPixelHue += 256) {
+    if (digitalRead(BUTTON_SPIRAL_LEFT) == LOW) {
+      if (debug) {
+        Serial.println("Left snack chosen.");
+      }
+      game_won = false;
+      spinMotorLeft();
+      break;
+    } else if (digitalRead(BUTTON_SPIRAL_RIGHT) == LOW) {
+      if (debug) {
+        Serial.println("Right snack chosen.");
+      }
+      game_won = false;
+      spinMotorRight();
+      break;
+    } else if (digitalRead(BUTTON_START) == LOW) {  // start new game without snack
+      game_won = false;
+      break;
+    }
+    strip.rainbow(firstPixelHue);
+    strip.show();
+    delay(wait);
+  }
 }
 
 // change color of LEDs
@@ -220,26 +219,24 @@ void setColor(uint32_t color) {
 
 // spins the left motor if chosen after game win
 void spinMotorLeft() {
-  // start motor for a bit even if light sensor is blocked
+  // start motor even if light sensor is blocked
   digitalWrite(MOTOR_LEFT, HIGH);
   delay(500);
   while (digitalRead(LIGHT_SENSOR_LEFT) == LOW) {  // light sensor not blocked
     digitalWrite(MOTOR_LEFT, HIGH);
   }
   digitalWrite(MOTOR_LEFT, LOW);
-  game_won = false;
 }
 
 // spins the right motor if chosen after game win
 void spinMotorRight() {
-  // start motor for a bit even if light sensor is blocked
+  // start motor even if light sensor is blocked
   digitalWrite(MOTOR_RIGHT, HIGH);
   delay(500);
   while (digitalRead(LIGHT_SENSOR_RIGHT) == LOW) {  // light sensor not blocked
     digitalWrite(MOTOR_RIGHT, HIGH);
   }
   digitalWrite(MOTOR_RIGHT, LOW);
-  game_won = false;
 }
 
 // start game when start button is pressed
