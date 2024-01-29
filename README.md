@@ -133,7 +133,7 @@ Hierbei werden die folgenden SVGs benötigt:
   signalisieren, dass er sich nicht weiter drehen soll (wir nennen ihn "Lichtblocker").
 - [inner.svg](svgs/inner.svg): Ein weiterer Lichtblocker für den zweiten Motor und die beiden inneren Platten, die die
   Spiralen für den
-  Ausgabemechanismuss tragen, sowie die Trennplatten, die die Spiralen voneinander trennen.
+  Ausgabemechanismus tragen, sowie die Trennplatten, die die Spiralen voneinander trennen.
 
 Die Innenplatten des Automaten, die den Ausgabemechanismus halten, sind nicht fest verbaut und können zu Wartungszwecken
 entnommen werden.
@@ -218,18 +218,18 @@ Verkabeln über die Platine einfacher, wie man im folgenden Bild sieht:
 Man braucht insgesamt 12 Datenpins (bei uns die schwarzen Kabel), in unserem Fall
 Pin 2 bis 13. An diese Pins muss man 7 Buttons, zwei Lichtschranken, zwei elektrische Schalter und einen LED-Streifen
 verbinden. Entsprechend muss man dann im Programmcode die Datenpins anpassen. Die elektrischen Schalter sind dazu da, um
-die Motoren anzusteuern, denn diese sollen sich nur beim Drücken der Snack-Button drehen.
+die Motoren anzusteuern, denn diese sollen sich nur beim Drücken der Snack-Buttons drehen.
 
 Bei den Motoren ist es wichtig, dass sie in die richtige Richtung drehen, sodass die Spiralen nach vorne drehen und
 nicht nach hinten. Notfalls kann man die Polung umdrehen (also Plus an Minus und Minus an Plus löten), sodass der Motor
 sich in die andere Richtung dreht.
 
-Die LED-Streifen, die dem Nutzer eine Farbe zeigt, werden an der Innenseite der Frontplatte, um die Plexiglasscheibe
+Die LED-Streifen, die den Nutzern eine Farbe anzeigen, werden an der Innenseite der Frontplatte, um die Plexiglasscheibe
 herum, angeklebt. Dafür muss man vorher die Streifen im Quadrat mit sehr kurzen Kabeln zusammenlöten.
 
 Weiterhin braucht man auf der Platine eine Verbindung zum GND vom Arduino Uno. Hierbei reicht ein Kabel (bei uns die
 blauen Kabel), an welches man dann alle Komponenten (Buttons, Schalter, etc.) verbindet. Das Gleiche macht man mit dem
-5V Pin des Arduino Uno, wobei hier noch ein Stromanschluss drangelötet werden muss, wo dann ein Stromkabel eingesteckt
+5V Pin des Arduino Uno, wobei hier noch ein Stromanschluss dran gelötet werden muss, wo dann ein Stromkabel eingesteckt
 wird (WICHTIG: nur ein Stromkabel mit 5V Leistung benutzen, bei uns die roten Kabel). Die Motoren können an sich mit bis
 zu 9V betrieben werden, jedoch drehen sie sich dann schneller, was für die Spiralen eher ein Nachteil ist.
 
@@ -268,7 +268,7 @@ geklebt werden.
 
 Im nächsten Schritt wäre Soundunterstützung denkbar, die dem Benutzer akustisches Feedback gibt, wenn das Spiel losgeht
 und wenn das Spiel gewonnen oder verloren wurde. Ebenfalls könnte man Soundeffekte entsprechend der Farbe abspielen.
-Dadurch müsste man das Spiel bei falscher Eingabe nicht sofort beenden, sondern man könnte versuchen ein Punktesystem
+Dadurch müsste man das Spiel bei falscher Eingabe nicht sofort beenden, sondern man könnte versuchen, ein Punktesystem
 einzubauen, wobei falsche Eingaben Minuspunkte geben. Außerdem wurde uns das Feedback gegeben, dass Menschen mit
 Rot-Grün-Schwäche ein Problem mit dem Spiel haben könnten, weshalb uns die Idee gekommen ist, ein Display einzubauen,
 das neben den Farben auch Symbole anzeigt, die auch auf den Arcade-Buttons zu finden sind, damit statt Farben mit Logos
