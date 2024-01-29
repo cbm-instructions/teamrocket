@@ -42,53 +42,49 @@ unsere Arbeit anderen Studenten Freude bereitet.
 
 ## Werkzeuge
 
-* Lasercutter (alternativ auch eine Laubsäge und Schleifpapier)
-* 3D-Drucker
-* Lötkolben
-* Lötzinn
-* Schraubenzieher
-* Schraubenschlüssel
-* Bohrmaschine
-* Heißklebepistole & Heißkleber
-* Pinsel
-* Farbrollen
-* Laptop
-* Arduino IDE
-* Beißzange
-* Inkscape
+- Lasercutter (alternativ auch eine Laubsäge und Schleifpapier)
+- Lötkolben
+- Lötzinn
+- Schraubenzieher
+- Bohrmaschine
+- Heißklebepistole & Heißkleber
+- Pinsel
+- Farbrollen
+- Laptop/Computer mit Arduino IDE und Inkscape
+- Beißzange
 
 ## Material
 
-* 1 Plexiglasscheibe → ca. 30 cm breit und 15 cm hoch
-* Holzleim → schnell trocknend
-* Sperrholzplatten, Pappel, 4 mm
-* Plexiglas → klar, farblos 4 mm dick
-* Farbe → schwarz, Acryl Buntlack
-* Schrauben + Muttern → 4-mal M5x16
-* Lochband aus Metall → ca. 30 cm lang
-* 4 Schrauben die zum Lochband passen + Muttern
-* Stahldraht → ca. 2 Meter
-* einseitiges Klebeband
-* doppelseitiges Klebeband
-* Zylinderförmiges Objekt ca 6 cm Durchmesser um den Draht zu rollen
-* Arcade-Buttons - 1x gelb, 1x blau, 1x grün, 1x rot, 3x schwarz
-* Kabel mit Isolation → rot, blau, schwarz
-* Arduino Uno
-* Lochrasterplatine
-* LED-Streifen → 2x 13 cm, 2x 21 cm
-* 2 Lichtschranken
-* Wago Verbindungsklammern (3 Eingänge)
-* 2 Executive-Modul MOSFET-Transistor
-* Netzteil → 5V
-* Anschluss für Netzteil
-* 2 Motoren
+- 1 Plexiglasscheibe → ca. 30 cm breit und 15 cm hoch
+- Holzleim → schnell trocknend
+- Sperrholzplatten, Pappel, 4 mm
+- Plexiglas → klar, farblos 4 mm dick
+- Farbe → schwarz, Acryl Buntlack
+- Schrauben + Muttern → 4-mal M5x16
+- Lochband aus Metall → ca. 30 cm lang
+- 4 Schrauben die zum Lochband passen + Muttern
+- Stahldraht → ca. 2 Meter
+- einseitiges Klebeband
+- doppelseitiges Klebeband
+- Zylinderförmiges Objekt ca 6 cm Durchmesser um den Draht zu rollen
+- Arcade-Buttons - 1x gelb, 1x blau, 1x grün, 1x rot, 3x schwarz
+- Kabel mit Isolation → rot, blau, schwarz
+- Arduino Uno
+- Lochrasterplatine
+- LED-Streifen → 2x 13 cm, 2x 21 cm
+- 2 Lichtschranken
+- Wago Verbindungsklammern (3 Eingänge)
+- 2 Executive-Modul MOSFET-Transistor
+- Netzteil → 5V
+- Anschluss für Netzteil
+- 2 Motoren
 
 ## Empfohlene Vorkenntnisse
 
-* Löten
-* Lasercutten
-* Grundlegender Umgang mit dem Arduino
-* Arduino Programmierung (falls man das Programm anpassen möchte)
+- Löten
+- Lasercutten
+- Grundlegender Umgang mit dem Arduino
+- Arduino Programmierung (falls man das Programm anpassen möchte)
 
 # Bauanleitung
 
@@ -96,17 +92,18 @@ unsere Arbeit anderen Studenten Freude bereitet.
 
 Hierbei werden die folgenden SVGs benötigt:
 
-* back.svg: Die Rückseite des Automaten.
-* bottom_and_front.svg: Die Bodenplatte und die untere Frontplatte des Automaten.
-* front_2_and_front_3.svg: Die zwei oberen Frontplatten des Automaten.
-* game_pannel.svg: Die Platte an der die Spiel-Buttons befestigt werden.
-* plexiglas_front.svg: Die Plexiglasscheibe an der Front des Automaten.
-* side_left.svg: Die linke Seite des Automaten.
-* side_right.svg: Die rechte Seite des Automaten.
-* top_and_hole.svg: Die obere Platte des Automaten und eine Platte mit der Auswurföffnung für die Snacks.  
+- back.svg: Die Rückseite des Automaten.
+- bottom_and_front.svg: Die Bodenplatte und die untere Frontplatte des Automaten.
+- front_2_and_front_3.svg: Die zwei oberen Frontplatten des Automaten.
+- game_pannel.svg: Die Platte an der die Spiel-Buttons befestigt werden.
+- plexiglas_front.svg: Die Plexiglasscheibe an der Front des Automaten.
+- side_left.svg: Die linke Seite des Automaten.
+- side_right.svg: Die rechte Seite des Automaten.
+- top_and_hole.svg: Die obere Platte des Automaten und eine Platte mit der Auswurföffnung für die Snacks.
 
-Für den Bau des Gehäuses entschieden wir uns dazu, Sperrholzplatten zu benutzen. Die Sperrholzplatten wurden mit dem 
-Vektorgrafik-Programm Inkscape erstellt und können mithilfe des Lasercutters ausgeschnitten werden. Die dafür benötigten SVG-Dateien sind
+Für den Bau des Gehäuses entschieden wir uns dazu, Sperrholzplatten zu benutzen. Die Sperrholzplatten wurden mit dem
+Vektorgrafik-Programm Inkscape erstellt und können mithilfe des Lasercutters ausgeschnitten werden. Die dafür benötigten
+SVG-Dateien sind
 im [SVG Verzeichnis](svgs/) zu finden.
 
 Nachdem alle Platten vom Lasercutter geschnitten wurden, wird der Automat vorerst nur zusammengesteckt und nicht
@@ -131,9 +128,11 @@ Die Plexiglasscheibe wird ganz zum Schluss reingeschraubt.
 
 Hierbei werden die folgenden SVGs benötigt:
 
-* [sensor_blocker.svg](svgs/sensor_blocker.svg): Die an einem Motor befestigte Platte, die durch eine Laserschranke fährt, um dem Motor zu
+- [sensor_blocker.svg](svgs/sensor_blocker.svg): Die an einem Motor befestigte Platte, die durch eine Laserschranke
+  fährt, um dem Motor zu
   signalisieren, dass er sich nicht weiter drehen soll (wir nennen ihn "Lichtblocker").
-* [inner.svg](svgs/inner.svg): Ein weiterer Lichtblocker für den zweiten Motor und die beiden inneren Platten, die die Spiralen für den
+- [inner.svg](svgs/inner.svg): Ein weiterer Lichtblocker für den zweiten Motor und die beiden inneren Platten, die die
+  Spiralen für den
   Ausgabemechanismuss tragen, sowie die Trennplatten, die die Spiralen voneinander trennen.
 
 Die Innenplatten des Automaten, die den Ausgabemechanismus halten, sind nicht fest verbaut und können zu Wartungszwecken
@@ -147,7 +146,8 @@ Spiralen in die Konstruktion passen.
 Als Nächstes werden die beiden Laserschranken in die Vertiefungen der unteren Innenplatte gesetzt. Diese können zu
 Testzwecken vorerst mit doppelseitigem Klebeband befestigt werden.
 
-Daraufhin werden die Lichtblocker an dem Rad der Motoren befestigt. Diese können einfach auf die Räder gesteckt und mithilfe von Kabelbindern und Heißkleber fixiert werden.
+Daraufhin werden die Lichtblocker an dem Rad der Motoren befestigt. Diese können einfach auf die Räder gesteckt und
+mithilfe von Kabelbindern und Heißkleber fixiert werden.
 
 Die Motoren werden in die Löcher der vertikalen Innenplatte gesetzt und mithilfe des Metall-Lochbandes fixiert. Das
 Lochband wird an der vertikalen Innenplatte mithilfe von Holzschrauben und Muttern fixiert. Das Lochband wird für jeden
@@ -188,25 +188,26 @@ weil eine Grundierung die Sperrholzplatten noch stärker verformen könnte.
 
 ![Alternativer Text](images/Acryl.jpg)
 
-
 Der Automat kann mithilfe von Holzleim verklebt werden. Allerdings sind die obere sowie die Bodenplatte nicht zu
 verkleben, denn diese werden für den Einbau der Technik sowie zu Wartungszwecken und Nachfüllen der Spiralen benötigt.
 
 Erfahrungsgemäß ist es schwierig, die Technik zu verkabeln, wenn der Automat schon zusammengeklebt ist, deswegen
-empfehlen wir zuerst eine vollständige Verkabelung der Technik, dann den Automaten zu verkleben und ganz zum Schluss zu bemalen.
+empfehlen wir zuerst eine vollständige Verkabelung der Technik, dann den Automaten zu verkleben und ganz zum Schluss zu
+bemalen.
 
 Die Plexiglasscheibe kann an der Frontplatte an dem dafür vorgesehenen Ausschnitt von innen angebracht werden. Dazu
 werden 4 M5x16 Schrauben mit den dazugehörigen Muttern verwendet. Die Löcher für die Schrauben wurden bereits vom
 Lasercutter platziert.
 
-Zuletzt können die [Spielanleitung](svgs/instruction.svg) und die [Labels](svgs/instruction.svg) für die Snack-Buttons an den Automaten geklebt werden. Die Position
+Zuletzt können die [Spielanleitung](svgs/instruction.svg) und die [Labels](svgs/instruction.svg) für die Snack-Buttons
+an den Automaten geklebt werden. Die Position
 kann frei gewählt werden.
 
 ## Software und Technik
 
 Hierbei wird die folgende SVG benötigt:
 
-* arduino_platte.svg: Die Holzplatte an die der Arduino befestigt wird.
+- arduino_platte.svg: Die Holzplatte, an die die Platine und der Arduino befestigt werden.
 
 Für die Technik werden ein Arduino Uno, eine Platine und ganz viele Kabel benutzt. Dieser steckt auf entsprechenden
 Steckpins, die an eine Platine gelötet wurden. Dadurch kann man den Arduino Uno beliebig austauschen. Ebenfalls ist das
@@ -242,10 +243,12 @@ die Motoren, die Lichtschranken und die elektrischen Schalter montiert sind) hä
 man die Wago Verbindungsklammern nutzen (alternativ kann man Kabel mit Büchsen und Steckern verwenden) und diese mit
 doppelseitigem Klebeband an die Innenseite der Rückwand kleben (siehe nächstes Bild).
 
-
 ![Alternativer Text](images/Arduino_befestigung.jpg)
 
-Zum Schluss wird der Arduino auf die Arduino-Platte aus der "arduino_platte.svg" geschraubt. Dazu können alle Schrauben und Muttern genutzt werden, die in den Arduino passen. Dazu müssen zuerst Löcher in die Platte gebohrt werden, die den Positionen der Löcher des Arduinos entsprechen. Die Platte kann dann mit Heißkleber an die Innenseite des Automaten geklebt werden.
+Zum Schluss wird der Arduino auf die Arduino-Platte (siehe arduino_platte.svg) geschraubt. Dazu können alle Schrauben
+und Muttern genutzt werden, die in den Arduino passen. Dazu müssen zuerst Löcher in die Platte gebohrt werden, die den
+Positionen der Löcher des Arduinos entsprechen. Die Platte kann dann mit Heißkleber an die Innenseite des Automaten
+geklebt werden.
 
 # React to Snack - Demo
 
@@ -258,6 +261,7 @@ Zum Schluss wird der Arduino auf die Arduino-Platte aus der "arduino_platte.svg"
 ![Snack Gewinnen](images/play_win.gif)
 
 ## Verlieren
+
 ![Verlieren](images/play_lose.gif)
 
 # Ausblick
@@ -268,4 +272,5 @@ Dadurch müsste man das Spiel bei falscher Eingabe nicht sofort beenden, sondern
 einzubauen, wobei falsche Eingaben Minuspunkte geben. Außerdem wurde uns das Feedback gegeben, dass Menschen mit
 Rot-Grün-Schwäche ein Problem mit dem Spiel haben könnten, weshalb uns die Idee gekommen ist, ein Display einzubauen,
 das neben den Farben auch Symbole anzeigt, die auch auf den Arcade-Buttons zu finden sind, damit statt Farben mit Logos
-gespielt werden kann. Des Weiteren bietet der Snackautomat Platz für bis zu zwei weitere Spiralen und somit noch mehr Snackmöglichkeiten.
+gespielt werden kann. Des Weiteren bietet der Snackautomat Platz für bis zu zwei weitere Spiralen und somit noch mehr
+Snackmöglichkeiten.
