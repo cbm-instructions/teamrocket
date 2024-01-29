@@ -1,4 +1,4 @@
-<h1>React to Snack - Die Arcade Machine mit Snackpreisen</h1>
+# React to Snack - Die Arcade Machine mit Snackpreisen
 
 # Inhaltsverzeichnis
 
@@ -18,6 +18,7 @@
   - [Gewinnen](#gewinnen)
   - [Verlieren](#verlieren)
 - [Ausblick](#ausblick)
+- [Team Rocket](#team-rocket)
 
 # Motivation
 
@@ -207,7 +208,7 @@ kann frei gewählt werden.
 
 Hierbei wird die folgende SVG benötigt:
 
-- arduino_platte.svg: Die Holzplatte, an die die Platine und der Arduino befestigt werden.
+- [arduino_platte.svg](svgs/arduino_platte.svg): Die Holzplatte, an die die Platine und der Arduino befestigt werden.
 
 Für die Technik werden ein Arduino Uno, eine Platine und ganz viele Kabel benutzt. Dieser steckt auf entsprechenden
 Steckpins, die an eine Platine gelötet wurden. Dadurch kann man den Arduino Uno beliebig austauschen. Ebenfalls ist das
@@ -233,7 +234,7 @@ blauen Kabel), an welches man dann alle Komponenten (Buttons, Schalter, etc.) ve
 wird (WICHTIG: nur ein Stromkabel mit 5V Leistung benutzen, bei uns die roten Kabel). Die Motoren können an sich mit bis
 zu 9V betrieben werden, jedoch drehen sie sich dann schneller, was für die Spiralen eher ein Nachteil ist.
 
-Letztlich lädt man den Programmcode auf den Arduino und kann den Automaten benutzen. Wichtig hierbei ist es zu beachten,
+Letztlich lädt man den [Programmcode](https://github.com/cbm-instructions/teamrocket/blob/main/reaction_game.ino) auf den Arduino und kann den Automaten benutzen. Wichtig hierbei ist es zu beachten,
 dass man nicht gleichzeitig ein Stromkabel und einen Laptop anschließt, um mögliche Probleme mit dem Strom zu vermeiden.
 Der Anschluss für das Stromkabel ist optional, man kann den Automaten auch immer an einem Laptop angeschlossen lassen,
 was auch 5V bieten würde (abhängig vom Anwendungsszenario).
@@ -274,3 +275,11 @@ Rot-Grün-Schwäche ein Problem mit dem Spiel haben könnten, weshalb uns die Id
 das neben den Farben auch Symbole anzeigt, die auch auf den Arcade-Buttons zu finden sind, damit statt Farben mit Logos
 gespielt werden kann. Des Weiteren bietet der Snackautomat Platz für bis zu zwei weitere Spiralen und somit noch mehr
 Snackmöglichkeiten.
+
+
+# Team Rocket
+
+- Alexander Obwandner
+- Andreas Latanowsky
+- Filip Cavar
+- Sven Hoffmann
